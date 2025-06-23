@@ -1,0 +1,157 @@
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Проверка Сердца</title>
+    <link rel="stylesheet" href="/static/style/style.css">
+</head>
+<body>
+    <header>
+        <img src="/static/icon/heart_icon.png" alt="Иконка сердца" class="header-icon">
+        <h1>Проверь своё сердце</h1>
+    </header>
+
+    <main>
+        <form id="prediction-form">
+            <div class="form-groups-container">
+                <fieldset class="form-groupbox">
+                    <legend>Пациент</legend>
+                    <div class="form-group-content">
+                        <div class="form-group">
+                            <label for="age">Возраст пациента: <span id="age-value">0.5</span></label>
+                            <input type="range" id="age" name="age" min="0" max="1" step="0.01" value="0.5">
+                        </div>
+                        <div class="form-group">
+                            <label for="bmi">Индекс массы тела (ИМТ): <span id="bmi-value">0.5</span></label>
+                            <input type="range" id="bmi" name="bmi" min="0" max="1" step="0.01" value="0.5">
+                        </div>
+                         <div class="form-group">
+                            <label for="diet">Тип диеты: <span id="diet-value">1</span></label>
+                            <input type="range" id="diet" name="diet" min="0" max="2" step="1" value="1">
+                        </div>
+                        <div class="form-group">
+                            <label for="stress_level">Уровень стресса: <span id="stress_level-value">5</span></label>
+                            <input type="range" id="stress_level" name="stress_level" min="1" max="10" step="1" value="5">
+                        </div>
+                        <div class="form-group">
+                            <label for="sedentary_hours_per_day">Часы пассивного образа жизни в день: <span id="sedentary_hours_per_day-value">0.5</span></label>
+                            <input type="range" id="sedentary_hours_per_day" name="sedentary_hours_per_day" min="0" max="1" step="0.01" value="0.5">
+                        </div>
+                        <div class="form-group">
+                            <label for="exercise_hours_per_week">Часы занятий спортом в неделю: <span id="exercise_hours_per_week-value">0.5</span></label>
+                            <input type="range" id="exercise_hours_per_week" name="exercise_hours_per_week" min="0" max="1" step="0.01" value="0.5">
+                        </div>
+                        <div class="form-group">
+                            <label for="physical_activity_days_per_week">Количество дней физической активности в неделю: <span id="physical_activity_days_per_week-value">3</span></label>
+                            <input type="range" id="physical_activity_days_per_week" name="physical_activity_days_per_week" min="0" max="7" step="1" value="3">
+                        </div>
+                        <div class="form-group">
+                            <label for="sleep_hours_per_day">Продолжительность сна в сутки: <span id="sleep_hours_per_day-value">0.5</span></label>
+                            <input type="range" id="sleep_hours_per_day" name="sleep_hours_per_day" min="0" max="1" step="0.01" value="0.5">
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset class="form-groupbox">
+                    <legend>Анамнез</legend>
+                    <div class="form-group-content">
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="diabetes" name="diabetes">
+                            <label for="diabetes">Наличие диабета</label>
+                        </div>
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="family_history" name="family_history">
+                            <label for="family_history">Заболевания в семье</label>
+                        </div>
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="obesity" name="obesity">
+                            <label for="obesity">У пациента ожирение</label>
+                        </div>
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="alcohol_consumption" name="alcohol_consumption">
+                            <label for="alcohol_consumption">Пациент употребляет алкоголь</label>
+                        </div>
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="previous_heart_problems" name="previous_heart_problems">
+                            <label for="previous_heart_problems">Проблемы с сердцем ранее</label>
+                        </div>
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="medication_use" name="medication_use">
+                            <label for="medication_use">Принимает препараты</label>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset class="form-groupbox">
+                    <legend>Результаты обследования</legend>
+                    <div class="form-group-content">
+                         <div class="form-group">
+                            <label for="heart_rate">Пульс: <span id="heart_rate-value">0.5</span></label>
+                            <input type="range" id="heart_rate" name="heart_rate" min="0" max="1" step="0.01" value="0.5">
+                        </div>
+                        <div class="form-group">
+                            <label for="systolic_blood_pressure">Систолическое артериальное давление: <span id="systolic_blood_pressure-value">0.5</span></label>
+                            <input type="range" id="systolic_blood_pressure" name="systolic_blood_pressure" min="0" max="1" step="0.01" value="0.5">
+                        </div>
+                        <div class="form-group">
+                            <label for="diastolic_blood_pressure">Диастолическое артериальное давление: <span id="diastolic_blood_pressure-value">0.5</span></label>
+                            <input type="range" id="diastolic_blood_pressure" name="diastolic_blood_pressure" min="0" max="1" step="0.01" value="0.5">
+                        </div>
+                        <div class="form-group">
+                            <label for="cholesterol">Уровень холестерина: <span id="cholesterol-value">0.5</span></label>
+                            <input type="range" id="cholesterol" name="cholesterol" min="0" max="1" step="0.01" value="0.5">
+                        </div>
+                        <div class="form-group">
+                            <label for="triglycerides">Уровень триглицеридов: <span id="triglycerides-value">0.5</span></label>
+                            <input type="range" id="triglycerides" name="triglycerides" min="0" max="1" step="0.01" value="0.5">
+                        </div>
+                         <div class="form-group">
+                            <label for="blood_sugar">Уровень глюкозы в крови: <span id="blood_sugar-value">0.5</span></label>
+                            <input type="range" id="blood_sugar" name="blood_sugar" min="0" max="1" step="0.01" value="0.5">
+                        </div>
+                         <div class="form-group">
+                            <label for="ck-mb">Уровень фермента креатинкиназы: <span id="ck-mb-value">0.5</span></label>
+                            <input type="range" id="ck_mb" name="ck_mb" min="0" max="1" step="0.01" value="0.5">
+                        </div>
+                        <div class="form-group">
+                            <label for="troponin">Уровень тропонина: <span id="troponin-value">0.5</span></label>
+                            <input type="range" id="troponin" name="troponin" min="0" max="1" step="0.01" value="0.5">
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+
+            <div class="bottom-form-section">
+                <div class="submission-area">
+                    <div class="submission-controls">
+                        <div class="form-group">
+                            <label for="username">Введите своё имя</label>
+                            <input type="text" id="username" name="username" placeholder="Иван Иванов" required>
+                        </div>
+                        <button type="submit" class="submit-button">Отправить</button>
+                    </div>
+
+                    <div class="file-upload-section">
+                        <input type="file" id="file-input" hidden>
+                        <label for="file-input" class="file-label" id="file-label">Выбрать файл</label>
+                        <button id="send-file-btn" class="submit-button" disabled>Отправить файл</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </main>
+
+    <div id="result-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close-btn">&times;</button>
+            <p id="modal-message"></p>
+        </div>
+    </div>
+
+    <footer>
+        <p>Сервис носит информационный характер и не заменяет поход к дипломированному специалисту.</p>
+    </footer>
+
+    <script type="module" src="/static/js/script.js"></script>
+</body>
+</html>
