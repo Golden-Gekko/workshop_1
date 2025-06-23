@@ -29,8 +29,8 @@
 ### Клонирование репозитория
 
 ```bash
-git clone https://github.com/your_username/heart_attack_prediction.git
-cd heart_attack_prediction
+git clone https://github.com/Golden-Gekko/workshop_1.git
+cd workshop_1
 ```
 
 ### Настройка виртуального окружения Python
